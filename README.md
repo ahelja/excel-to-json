@@ -8,17 +8,17 @@ This Electron application allows you to convert Excel files into JSON format. Th
 
 To install the application, you need to have Node.js and npm installed on your system. After cloning the repository, run the following command to install the dependencies:
 
-\`\`\`bash
+```bash
 npm install
-\`\`\`
+```
 
 ### Running the Application
 
 To run the application, use the following command:
 
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 ### Features
 
