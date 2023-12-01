@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="dropzone" style="width: 100%; height: 100%; text-align: center; padding-top: 15%;">
+      Trascina qui un file Excel
+    </div>
+    <script>
+      const { ipcRenderer } = require('electron');
+
+      document.addEventListener('dragover', (event) => {
+        event.preventDefault();
+        return false;
+      }, false);
+
+      document.addEventListener('drop', (event) => {
+        event.preventDefault();
+        const filePath = event.dataTransfer.files[0].path;
+        ipcRenderer.send('ondragstart', filePath);
+        return false;
+      }, false);
+    </script>
+  </body>
+</html>
